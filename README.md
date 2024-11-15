@@ -18,8 +18,9 @@ To run this notebook on Linux, you will need to install Anaconda, which includes
 1. Open your terminal.
 2. Download the Anaconda installer using wget (or use your browser):
 
-bash
+```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2023.07-Linux-x86_64.sh
+```
 
 ### Step 2: Install Anaconda
 1. Run the installer script in terminal.
@@ -40,14 +41,19 @@ pip install -r requirements.txt
 
 ### Step 5: Launch Jupyter Notebook
 You can find the Jupyter Notebook file used for this project [here](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/36364148/3637a198-4dec-40e6-9fb1-e501e5261507/train_model.ipynb).
-bash
+```bash
 jupyter notebook
+```
 
 
 ### Step 6: If do not works then use below commands for linux(Ubuntu)
-bash
-eval "$(/home/linux/anaconda3/bin/conda shell.bash hook)" # And second as this command
+```bash
+eval "$(/home/linux/anaconda3/bin/conda shell.bash hook)"
+```
+# And second as this command
+```bash
 anaconda-navigator
+```
 
 ## Usage
 Do the model Training. Save the model and utilise it for Detecting Facemask.
