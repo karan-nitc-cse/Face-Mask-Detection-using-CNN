@@ -30,8 +30,9 @@ Anaconda3-2023.07-Linux-x86_64.sh
 
 
 ### Step 3: Verify Installation
-bash
+```bash
 conda --version
+```
 
 
 ### Step 4: Install all Requirements for this project
