@@ -34,8 +34,9 @@ conda --version
 
 ### Step 4: Install all Requirements for this project
 From requirements.txt file by running bash command in terminal
-bash
+```bash
 pip install -r requirements.txt
+```
 
 ### Step 5: Launch Jupyter Notebook
 You can find the Jupyter Notebook file used for this project [here](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/36364148/3637a198-4dec-40e6-9fb1-e501e5261507/train_model.ipynb).
