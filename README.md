@@ -1,75 +1,164 @@
-# Face-Mask-Detection-using-CNN
+# Face Mask Detection Using MobileNetV2 and OpenCV
 
-## Overview
-This Jupyter Notebook, train_model.ipynb, is designed to train a machine learning model. It includes steps for data preprocessing, model selection, training, and evaluation.
+## 🚀 Overview
 
-## Table of Contents
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Data](#data)
-4. [Model Training](#model-training)
-5. [Results](#results)
+Face mask detection has become an essential tool for maintaining public safety, especially during health crises like the COVID-19 pandemic. This project employs **MobileNetV2** and **OpenCV** to create an efficient and lightweight face mask detection system capable of real-time analysis. 
 
-## Installation
-To run this notebook on Linux, you will need to install Anaconda, which includes Python, Jupyter Notebook, and many useful libraries.
+The system identifies whether a person is wearing a mask or not, using deep learning techniques combined with computer vision.
 
+---
 
-### Step 1: Download Anaconda
-1. Open your terminal.
-2. Download the Anaconda installer using wget (or use your browser):
+## 🌟 Features
 
+- **Real-Time Mask Detection**: Analyze live video streams or static images to detect face masks.
+- **Lightweight & Efficient**: Powered by MobileNetV2 for fast and accurate predictions.
+- **Customizable**: Easily retrain the model with new datasets or modify detection thresholds.
+- **Pre-Trained Model Support**: Use our pre-trained weights for instant testing.
+
+---
+
+## 📂 Dataset
+
+The dataset consists of labeled images divided into two classes:
+- **With Mask**: Images showing individuals wearing face masks.
+- **Without Mask**: Images of individuals without face masks.
+
+### Preprocessing Steps:
+- Images resized to **128x128 pixels**.
+- Normalized pixel values for faster convergence.
+- Data augmentation applied for better model generalization.
+
+---
+
+## 🔧 Model Architecture
+
+The core of the system is **MobileNetV2**, chosen for its balance of performance and computational efficiency. Key components include:
+- **Feature Extraction**: MobileNetV2 base for extracting rich image features.
+- **Dense Layers**: Fully connected layers for classification into "With Mask" or "Without Mask."
+- **Input Size**: Images of size **128x128x3 (RGB)**.
+
+---
+
+## 🚧 Installation and Setup
+
+### Prerequisites
+Ensure the following are installed on your system:
+- Python 3.8+
+- TensorFlow/Keras
+- OpenCV
+- NumPy
+- Matplotlib
+
+### Steps to Set Up
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd face-mask-detection
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Prepare the dataset:
+   - Place the dataset in the `data/` directory.
+   - Ensure the folder structure follows:
+     ```
+     data/
+     ├── train/
+     │   ├── with_mask/
+     │   └── without_mask/
+     ├── test/
+     │   ├── with_mask/
+     │   └── without_mask/
+     ```
+
+---
+
+## 🎮 Usage
+
+### 1. Train the Model
+Train the model using your dataset:
 ```bash
-wget https://repo.anaconda.com/archive/Anaconda3-2023.07-Linux-x86_64.sh
+python train.py
 ```
 
-### Step 2: Install Anaconda
-1. Run the installer script in terminal.
+### 2. Evaluate the Model
+Test the model’s performance on the validation or test set:
 ```bash
-Anaconda3-2023.07-Linux-x86_64.sh
+python evaluate.py
 ```
 
-
-### Step 3: Verify Installation
+### 3. Real-Time Detection
+Run real-time detection using your webcam or video file:
 ```bash
-conda --version
+python detect_mask_video.py
 ```
 
+---
 
-### Step 4: Install all Requirements for this project
-From requirements.txt file by running bash command in terminal
-```bash
-pip install -r requirements.txt
+## 📊 Results
+
+- **Accuracy**: Achieved **XX%** accuracy on the test set.
+- **Model Size**: The final model is lightweight and optimized for deployment.
+
+### Sample Output
+
+Include a few sample detections for better visualization:
+
+| Input Image | Prediction |
+|-------------|------------|
+| ![with_mask](https://via.placeholder.com/100) | Mask Detected |
+| ![without_mask](https://via.placeholder.com/100) | No Mask Detected |
+
+---
+
+## 📁 Project Structure
+
+```
+face-mask-detection/
+├── data/                     # Dataset directory
+├── models/                   # Trained model weights
+├── scripts/                  # Scripts for training, evaluation, and detection
+├── requirements.txt          # Dependencies
+├── train.py                  # Model training script
+├── evaluate.py               # Model evaluation script
+├── detect_mask_video.py      # Real-time detection script
+└── README.md                 # Documentation
 ```
 
-### Step 5: Launch Jupyter Notebook
-You can find the Jupyter Notebook file used for this project [here](https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/36364148/3637a198-4dec-40e6-9fb1-e501e5261507/train_model.ipynb).
-```bash
-jupyter notebook
-```
+---
 
+## 🛠️ Future Enhancements
 
-### Step 6: If do not works then use below commands for linux(Ubuntu)
-```bash
-eval "$(/home/linux/anaconda3/bin/conda shell.bash hook)"
-```
-# And second as this command
-```bash
-anaconda-navigator
-```
+- **Multi-Class Detection**: Expand to detect improper mask usage.
+- **Model Optimization**: Optimize for edge devices like Raspberry Pi.
+- **Enhanced Dataset**: Incorporate more diverse and challenging samples.
 
-## Usage
-Do the model Training. Save the model and utilise it for Detecting Facemask.
+---
 
-## Data
+## 🤝 Contributing
 
-Utilise Kaggle Data Set for Training the model.
-You can find the Data set from [here](https://www.kaggle.com/datasets/omkargurav/face-mask-dataset).
+Contributions are welcome! Whether it’s fixing bugs, improving documentation, or enhancing the model, feel free to:
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
 
+---
 
-## Model Training
-Use the Python script train_model.ipynb to train the model and save this model
-as mask_detector_model.h5 and utilise it for Facemask Detection.
+## 🐝 License
 
-## Results
-Save the results in the seperate Directory result.
-##
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## 💬 Acknowledgments
+
+Special thanks to:
+- **MobileNetV2**: Lightweight architecture by Google.
+- **OpenCV**: For robust video and image processing.
+- Contributors who made the dataset publicly available.
+
+---
