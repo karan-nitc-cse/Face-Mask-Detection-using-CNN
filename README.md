@@ -24,8 +24,9 @@ wget https://repo.anaconda.com/archive/Anaconda3-2023.07-Linux-x86_64.sh
 
 ### Step 2: Install Anaconda
 1. Run the installer script in terminal.
-bash
-bash Anaconda3-2023.07-Linux-x86_64.sh
+```bash
+Anaconda3-2023.07-Linux-x86_64.sh
+```
 
 
 ### Step 3: Verify Installation
